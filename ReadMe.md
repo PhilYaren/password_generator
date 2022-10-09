@@ -6,6 +6,9 @@ Stack:
 <li>
     Django 4.1
 </li>
+<li>
+    Bootstrap 5.x
+</li>
 <br>
 Absurdly simple project on Django framework without deep usage of its core functions and advantages. But, as someone once said <p style='font-weight:bold'>There is often great beauty in simplicity.'</p>
 <br>

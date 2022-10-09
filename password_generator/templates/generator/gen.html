@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    MMM, We're gonna do some Goofy PASSWORDS
+{% endblock title %}
+    
+
+
+{% block content %}
+    <div class='d-flex justify-content-center'>
+        <h3>
+            Select which options suit you best
+        </h3>
+    </div>
+    <form class="form-check-verttical d-flex flex-column align-items-center" action="{% url 'generator:pwd' %}">
+          <div>
+            <label for="" class="form-label">Select length</label>
+            <select name="length" id="">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected>12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-check-label" for="">
+                With Uppercase letters
+            </label>
+            <input class="form-check-input" name="uppercase" type="checkbox" style='margin-left:5px' value="True" checked>
+          </div>
+          <div>
+            <label class="form-check-label">
+                Numbers in password
+            </label>
+            <input class="form-check-input" name='numbers' type="checkbox" style='margin-left:5px' value="True" checked>
+          </div>
+          <div>
+            <label class="form-check-label">
+                Special chars in password
+            </label>
+            <input class="form-check-input" name='special' type="checkbox" style='margin-left:5px' value="True">
+          </div>
+          <button type="submit" style='margin-top:5px'class="btn btn-primary">Generate password</button>
+    </form>
+    <div class='d-flex flex-column align-items-center'>
+      <a type="submit" style='margin-top:5%' class="btn btn-outline-danger" href='{% url "generator:sorry" %}'> Give it a try</a>
+    </div>
+{% endblock content %}

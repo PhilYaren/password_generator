@@ -1,4 +1,4 @@
-# Генератор ключей на Джанго
+# Password generator
 Stack:
 <li>
     Python 3.10
